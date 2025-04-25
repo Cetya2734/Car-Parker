@@ -1631,10 +1631,6 @@ PrefabInstance:
       propertyPath: crashText
       value: 
       objectReference: {fileID: 603136106}
-    - target: {fileID: 2547675517079194643, guid: 43aaaf2d984b75c408773bdb4fef77f8, type: 3}
-      propertyPath: turnSpeed
-      value: 120
-      objectReference: {fileID: 0}
     - target: {fileID: 4876706010194399335, guid: 43aaaf2d984b75c408773bdb4fef77f8, type: 3}
       propertyPath: m_Name
       value: Car

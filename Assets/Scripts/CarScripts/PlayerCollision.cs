@@ -32,7 +32,10 @@ public class PlayerCollision : MonoBehaviour
             // Play crash sound
             if (audioSource != null && crashSound != null)
             {
-                audioSource.PlayOneShot(crashSound); // Play sound effect once
+                float originalVolume = audioSource.volume;
+                audioSource.volume = 1f; // Boost volume for crash
+                audioSource.PlayOneShot(crashSound);
+                audioSource.volume = originalVolume; // Reset volume after playing
             }
 
             // Start real-time delay coroutine for scene restart

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8432184780162172426}
   - component: {fileID: 2158549847630393977}
   - component: {fileID: 4386875253641426407}
+  - component: {fileID: 8096121780688556503}
   m_Layer: 0
   m_Name: Car
   m_TagString: Player
@@ -35,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6037269940420924068
 SpriteRenderer:
@@ -101,9 +102,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6477eb3700a9b841a4c750729dafa1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3.5
+  moveSpeed: 4
   reverseSpeed: 2.5
-  turnSpeed: 150
+  turnSpeed: 120
 --- !u!70 &458836138011239056
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -191,14 +192,14 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.509
+  m_PlayOnAwake: 0
+  m_Volume: 0.514
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 88
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -276,3 +277,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8096121780688556503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4876706010194399335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f201bc1c3e01ce041b15c38dc197a8e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startupClip: {fileID: 8300000, guid: 56c7ad2bedbbf3a4cbb0173ec0e9d740, type: 3}
+  idleClip: {fileID: 8300000, guid: c502041826854664683f9914f63427b0, type: 3}
+  lowOnClip: {fileID: 8300000, guid: 75fa27e467267c74f91f1f6f4e74ff88, type: 3}
+  lowOffClip: {fileID: 8300000, guid: bb683044c23cd50438d45fe475089c84, type: 3}
+  moveThreshold: 0.1
+  fadeDuration: 0.05
